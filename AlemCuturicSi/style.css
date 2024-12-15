@@ -1,0 +1,191 @@
+body {
+            background: linear-gradient(to bottom, #001d3d, #000000);
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #002855;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .navbar-brand {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: width 0.3s ease;
+            z-index: 1;
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        .nav-link span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .planet-info {
+            margin-top: 2rem;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 2rem;
+            margin: 10rem 0;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+        }
+
+        .carousel-item img {
+            max-height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #000814;
+            margin-top: 0px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #002855;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .solar-system {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+        }
+
+        .sun {
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle, #ffcc00, #ff6600);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .planet {
+            width: 20px;
+            height: 20px;
+            background: #4caf50;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: orbit 10s linear infinite;
+        }
+
+        .planet:nth-child(2) {
+            width: 15px;
+            height: 15px;
+            background: #2196f3;
+            animation-duration: 8s;
+        }
+
+        .planet:nth-child(3) {
+            width: 10px;
+            height: 10px;
+            background: #ff5722;
+            animation-duration: 6s;
+        }
+
+        @keyframes orbit {
+            0% {
+                transform: rotate(0deg) translateX(100px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(100px) rotate(-360deg);
+            }
+        }
+
+        .countdown {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .countdown h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+         
+        }
+
+        .countdown .time {
+            font-size: 2rem;
+        }
